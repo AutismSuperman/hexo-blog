@@ -1,0 +1,8 @@
+[submodule "themes/butterfly"]
+	path = themes/butterfly
+	url = https://github.com/AutismSuperman/hexo-theme-butterfly
+	branch = custom
+[submodule "source/_posts"]
+	path = source/_posts
+	url = https://github.com/AutismSuperman/hexo-source
+	branch = main

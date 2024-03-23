@@ -1,0 +1,8 @@
+class:
+  class_name: 友情链接
+  link_list:
+    1:
+      name: 远佬
+      link: https://iiiii.run/
+      avatar: https://iiiii.run/image/system/avatar.jpg
+      descr: 一个物联网大佬
