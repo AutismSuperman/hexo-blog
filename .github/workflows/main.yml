@@ -7,6 +7,8 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  repository_dispatch:
+    types: [hexo-event] 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -21,6 +23,18 @@ jobs:
       - name: init submodule
         run: |
           git submodule update --init --recursive
+          cd ./source/_posts
+          git reset --hard main
+          cd ../../
+          cd ./theme/butterfly
+          git reset --hard custom
+          cd ../../
+          git add . 
+          git commit 'update submodule'
+      - name: update submodule
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}   
       - name: install node
         uses: actions/setup-node@v1
         with:
