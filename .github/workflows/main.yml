@@ -56,4 +56,4 @@ jobs:
           repository-name: AutismSuperman/AutismSuperman.github.io
           branch: main
           folder: public
-          commit-message: "${{ github.event.head_commit.message }} Updated by Github Action"
+          commit-message: "Updated by Github Action"
