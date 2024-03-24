@@ -27,6 +27,7 @@ jobs:
           git reset --hard main
           cd ../../
           cd ./themes/butterfly
+          git checkout custom
           git reset --hard custom
           cd ../../
           git add . 
