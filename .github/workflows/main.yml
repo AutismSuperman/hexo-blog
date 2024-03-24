@@ -30,6 +30,8 @@ jobs:
           git checkout custom
           git reset --hard custom
           cd ../../
+          git config --global user.email fulinlin9527@outlook.com
+          git config --global user.name AutismSuperman
           git add . 
           git commit -m 'update submodule'
       - name: update submodule
