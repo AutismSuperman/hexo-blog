@@ -23,13 +23,7 @@ jobs:
       - name: init submodule
         run: |
           git submodule update --init --recursive
-          cd ./source/_posts
-          git reset --hard main
-          cd ../../
-          cd ./themes/butterfly
-          git checkout custom
-          git reset --hard custom
-          cd ../../
+          git submodule update --remote --recursive
           git config --global user.email fulinlin9527@outlook.com
           git config --global user.name AutismSuperman
           git add . 
