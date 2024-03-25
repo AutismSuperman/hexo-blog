@@ -27,7 +27,7 @@ jobs:
           git config --global user.email fulinlin9527@outlook.com
           git config --global user.name AutismSuperman
           git add .
-          git commit -m "update submodule"
+          git diff --exit-code || git commit -m "update submodule"
       - name: update submodule
         uses: ad-m/github-push-action@master
         with:
